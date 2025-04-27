@@ -48,7 +48,7 @@ if grep -q "reset=true" "reset.txt"; then
   sed -i '/^stats: /d' bungee/config.yml
   sed -i "s/^server_uuid: .*\$/server_uuid: $(cat /proc/sys/kernel/random/uuid)/" bungee/plugins/EaglercraftXBungee/settings.yml
   rm -f /tmp/mcp918.zip
-  rm -f /tmp/1.8.8.jar
+  rm -f /tmp/1.12.2.jar
   rm -f /tmp/1.8.json
   chmod +x selsrv.sh
   ./selsrv.sh
@@ -82,8 +82,8 @@ if [ -f "client_version" ] && [ -f "gateway_version" ]; then
     if [ ! -f /tmp/mcp918.zip ]; then
       wget -O /tmp/mcp918.zip http://www.modcoderpack.com/files/mcp918.zip
     fi
-    if [ ! -f /tmp/1.8.8.jar ]; then
-      wget -O /tmp/1.8.8.jar https://launcher.mojang.com/v1/objects/0983f08be6a4e624f5d85689d1aca869ed99c738/client.jar
+    if [ ! -f /tmp/1.12.2.jar ]; then
+      wget -O /tmp/1.12.2.jar https://launcher.mojang.com/v1/objects/0983f08be6a4e624f5d85689d1aca869ed99c738/client.jar
     fi
     if [ ! -f /tmp/1.8.json ]; then
       wget -O /tmp/1.8.json https://launchermeta.mojang.com/v1/packages/f6ad102bcaa53b1a58358f16e376d548d44933ec/1.8.json
